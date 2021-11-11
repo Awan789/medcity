@@ -138,10 +138,10 @@
                       <span>Book Appointment</span>
                       <i class="icon-arrow-right"></i>
                     </a>
-                    <a href="services.html" class="btn btn__white btn__rounded">
+                    <button class="btn btn__white btn__rounded" onclick="toOurService()">
                       <span>Our Services</span>
                       <i class="icon-arrow-right"></i>
-                    </a>
+                      </a>
                   </div>
                 </div><!-- /.slide-content -->
               </div><!-- /.col-xl-7 -->
@@ -188,7 +188,7 @@
     <!-- ========================
         Services Layout 2
     =========================== -->
-    <section class="services-layout2 services-carousel bg-overlay bg-overlay-primary pt-130">
+    <section class="services-layout2 services-carousel bg-overlay bg-overlay-primary pt-130" id="services">
       <div class="bg-img"><img src="assets/images/banners/1.jpg" alt="background"></div>
       <div class="container">
         <div class="row">
@@ -417,6 +417,13 @@
   <script src="assets/js/jquery-3.5.1.min.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    function toOurService() {
+      //document.getElementById("services").scrollIntoView();
+      var services = document.getElementById("services").offsetTop;
+      window.scrollTo({ top: services-70, behavior: 'smooth'});
+    }
+  </script>
 </body>
 
 </html>
